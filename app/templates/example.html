@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+{% block title %}Example Plot{% endblock %}
+{% block main %}
+<h1>Generated Plot</h1>
+<p>This plot was rendered using matplotlib and embedded as a base64 image:</p>
+<img src="data:image/png;base64,{{ plot }}" alt="Generated Plot" class="img-fluid">
+{% endblock %}

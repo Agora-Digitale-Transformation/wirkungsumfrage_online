@@ -1,11 +1,16 @@
 {% extends "layout.html" %}
-{% block title %} Example Bootstrap {% endblock %}
+{% block title %}Home{% endblock %}
 {% block main %}
-<div >
-    <H1>Home page</H1>
-    Using Mint theme bs-secondary as background in body
-</div>
-<div class="div2background">
-    Little div with primary color
+<h1>Control Panel</h1>
+<div class="bg-primary">
+    <form action="{{ url_for('example') }}" method="get">
+        <label for="param">Select a Parameter:</label>
+        <input type="range" id="param" name="param" min="1" max="10" value="1"
+               oninput="this.nextElementSibling.value = this.value">
+        <output>1</output>
+        <br>
+        <button class="btn btn-outline-secondary" type="submit">Beispiel Plot</button>
+    </form>
+    
 </div>
 {% endblock %}
